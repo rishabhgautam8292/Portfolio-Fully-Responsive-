@@ -1,0 +1,501 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* Colors */
+  --primary-color: #2b6178;
+  --secondary-color: #458aa9;
+  --lightsecondary-color: #aed1e1;
+  --dark-color: #000000;
+  --white-color: #fff;
+  --light-gray-color: #eaeaea;
+  --dark-gray-color: #738588;
+  --darker: #51595b;
+}
+
+/* ------------------------ header ------------------------ */
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+  url(./images/rishabh.png) , url(./images/rishabhflip.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  border-bottom-style: solid;
+  border-color: var(--light-gray-color);
+  border-width: thin;
+}
+
+/* ------------------------ nav ------------------------ */
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 70px;
+}
+
+nav .fa-solid {
+  display: none;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: var(--darker);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.nav-links ul li a:hover {
+  color: var(--darker);
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--secondary-color);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+
+/* ------------------------ header text-box ------------------------ */
+
+.text-box {
+  width: 87%;
+  color: var(--darker);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: right;
+  cursor: default;
+}
+
+.text-box h1 {
+  font-size: 50px;
+}
+
+.text-box h1:hover{
+  color: var(--primary-color);
+}
+
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 14px;
+  color: var(--dark-gray-color);
+}
+
+.text-box p:hover{
+  /* color: var(--dark-color); */
+  text-shadow: 1px 1px var(--light-gray-color);
+}
+
+
+/* ------------------------ button ------------------------ */
+
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--white-color);
+  border: 1px var(--darker);
+  padding: 12px 34px;
+  font-size: 13px;
+  background: var(--darker);
+  position: relative;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  background: var(--secondary-color);
+  transition: 1s;
+}
+
+
+/* ------------------------ about ------------------------ */
+
+.about {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+h1:hover{
+  color: var(--secondary-color);
+  text-shadow: 1px 1px var(--lightsecondary-color);
+}
+
+p {
+  color: var(--darker);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+/* row for all */
+
+.row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-col {
+  flex-basis: 45%;
+  background: var(--light-gray-color);
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.about-col p{
+  text-align: left;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.about-col:hover {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* ------------------------ education ------------------------ */
+
+.education {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.education-col {
+  flex-basis: 30%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  /* text-align: left; */
+  background: var(--light-gray-color);
+  /* padding: 10px; */
+  cursor: pointer;
+}
+
+.education-col .college{
+  padding: 10px;
+  background-image: url(./images/college.jpg);
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+}
+
+.education-col .college:hover{
+  background: var(--light-gray-color);
+}
+
+.education-col .diploma{
+  padding: 10px;
+  background-image: url(./images/diploma.avif);
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+}
+
+.education-col .diploma:hover{
+  background: var(--light-gray-color);
+}
+
+.education-col .school{
+  padding: 10px;
+  background-image: url(./images/school.jpg);
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+}
+
+.education-col .school:hover{
+  background: var(--light-gray-color);
+}
+
+.education-col h2, h4, h5, h6{
+  color: transparent;
+}
+
+.education-col:hover h2{
+  color: var(--dark-color);
+  letter-spacing: 2px;
+  transition: 2s;
+}
+.education-col:hover h4{
+  color: var(--darker);
+  transition: 2s;
+}
+
+.education-col:hover h5{
+  color: var(--darker);
+  text-shadow: 2px 2px 5px var(--dark-gray-color);
+  transition: 2s;
+}
+
+.education-col:hover h6{
+  color: var(--darker);
+  text-decoration: underline;
+  transition: 2s;
+}
+
+
+/* ------------------------ skills ------------------------ */
+
+.skills {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.skills-col {
+  flex-basis: 31%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+}
+
+.skills-col img {
+  width: 100%;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--dark-gray-color);
+}
+
+.skills-col img:hover {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  transition: 1ms;
+}
+
+.skills-col h3 {
+  margin-top: 16px;
+  margin-bottom: 15px;
+}
+
+.skills-col p {
+  padding: 0;
+}
+
+.skills-col p:hover{
+  color: var(--primary-color);
+}
+
+
+/* -----Call To Action---- */
+
+.cta {
+  margin: 100px auto;
+  width: 80%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+  url(./images/hireme.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.cta h1 {
+  color: var(--white-color);
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+
+/* ------------------------ hobbies ------------------------ */
+
+.hobbies {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.hobbies-col {
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hobbies-col img {
+  width: 100%;
+  display: block;
+}
+
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.layer h2{
+  color: var(--light-gray-color);
+}
+
+.layer:hover {
+  /* background: var(--light-gray-color); */
+  background: rgba(41, 41, 41, 0.7);
+
+}
+
+.layer h3 {
+  width: 100%;
+  font-weight: 500;
+  color: var(--white-color);
+  font-size: 26px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.layer:hover h3 {
+  bottom: 49%;
+  opacity: 1;
+}
+
+
+/* ------------------------ footer ------------------------ */
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.footer h2:hover{
+  color: var(--secondary-color);
+}
+
+.footer h4 {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.icons .fa-brands {
+  color: var(--dark-gray-color);
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px 0;
+}
+
+.icons .fa-brands:hover {
+  color: var(--darker);
+  /* font-size: 150%; */
+}
+
+.icons h6{
+  color: var(--darker);
+  letter-spacing: 1px;
+}
+
+
+/*-----------Responsive-----------*/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .header{
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), 
+    url(./images/rishabhmid.png);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .header{
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), 
+    url(./images/rishabhmini.png);
+  }
+
+  .text-box h1 {
+    font-size: 20px;
+  }
+
+  .nav-links ul li {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    background: var(--light-gray-color);
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+  }
+
+  nav .fa-solid {
+    display: block;
+    color: var(--dark-color);
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .nav-links ul {
+    padding: 30px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .cta h1 {
+    font-size: 24px;
+  }
+}
